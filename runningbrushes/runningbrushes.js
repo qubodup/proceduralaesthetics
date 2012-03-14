@@ -8,7 +8,7 @@ var RunningBrushes = function() {
 		//self.canvas.addEventListener('mousedown', startRandomWalk, false);
 		self.clean();
 	
-		self.agentCount = 15;
+		self.agentCount = 150;
 		self.agents = [];
 		
 	}
@@ -19,8 +19,8 @@ var RunningBrushes = function() {
 		agent.x = Math.random() * self.canvas.width;
 		agent.y = Math.random() * self.canvas.height;
 		agent.angle = Math.random() * Math.PI * 2;
-		agent.speed = Math.random() * 20;
-		agent.radius = Math.random() * 20 + 1;
+		agent.speed = Math.random() * 200;
+		agent.radius = Math.random() * 10 + 1;
 		agent.red = Math.floor(Math.random() * 255);
 		agent.green = Math.floor(Math.random() * 255);
 		agent.blue = Math.floor(Math.random() * 255);
@@ -33,7 +33,7 @@ var RunningBrushes = function() {
 	
 	self.clean = function() {
 		self.ctxt.globalCompositeOperation = 'source-over';
-		self.ctxt.fillStyle="#B5D5F5";
+		self.ctxt.fillStyle="#fff";
 		self.ctxt.fillRect(0, 0, self.canvas.width, self.canvas.height);
 	}
 	
